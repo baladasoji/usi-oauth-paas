@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script type="text/javascript" src="usiauth.js"></script>
+  </head>
+  <body>
+
+       <!-- Main jumbotron for a primary marketing message or call to action -->
+       <div class="jumbotron">
+         <div class="container">
+           <h1>Welcome !</h1>
+           <p>Welcome to CIAM POC Demo. We will demonstrate first login to USI and then use the same towards CIAM and in the end make an API call</p>
+           <p><a class="btn btn-primary btn-lg" href="https://autht.maerskline.com/connect/authorize?client_id=akana&scope=openid&nonce=123455&response_type=token&state=34567898&redirect_uri=https%3A%2F%2Fiam-cdt.maerskline.com%2Fspa%2Fusiindex.html" role="button">Login to USI &raquo;</a></p>
+           <p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="populateTokens()">Display Tokens &raquo;</a></p>
+         </div>
+       </div>
+
+       <div class="container">
+         <!-- Example row of columns -->
+         <div class="row">
+           <div class="col-md-4">
+             <h2>USI ID Token</h2>
+             <p id='usitoken' style="word-wrap:break-word"></p>
+           </div>
+           <div class="col-md-4">
+             <h2>Decoded ID Token from USI</h2>
+             <p id='decodedusitoken' style="word-wrap:break-word"> </p>
+          </div>
+           <div class="col-md-4">
+             <h2>Call CIAM to authenticate</h2>
+             <p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="callFrAuthenticate()"> CIAM Authentication &raquo;</a></p>
+           </div>
+         </div>
+
+         <hr>
+
+       </div> <!-- /container -->
+
+
+  <!--
+    <h1>Welcome to Forgerock Integration demo  !</h1>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-6">
+        <a href=https://autht.maerskline.com/connect/authorize?client_id=akana&scope=openid&nonce=123455&response_type=token&state=34567898&redirect_uri=https%3A%2F%2Fiam-cdt.maerskline.com%2Fspa%2Fusiindex.html> Click here to login to USI  </a>
+      </div>
+      <div class="col-xl-6">
+        <input type="button" value="Click for USI Tokens" onclick="populateTokens()">
+      </div>
+
+      <div class="col-xl-6"> ID Token from USI </div>
+      <div class="col-xl-6" id="usitoken"> </div>
+
+      <div class="col-xl-6"> Decoded ID Token from USI </div>
+      <div class="col-xl-6" id="decodedusitoken"></div>
+      <div class="col-xl-6"> Authenticate with Forgerock </div>
+      <div class="col-xl-6">
+        <input type="button" value="Click to get access token from forgerock" onclick="callFrAuthenticate()">
+      </div>
+  </div>
+</div>
+-->
+  </body>
+</html>

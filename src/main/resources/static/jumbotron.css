@@ -1,0 +1,33 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+p.token
+{
+  width: 25em;
+  border: 1px solid #000000;
+  word-wrap: break-word;
+  font-size: 10px;
+  font-family: courier;
+}
+
+p.authrest
+{
+  width: 25em;
+  border: 1px solid #000000;
+  word-wrap: break-word;
+  font-size: 10px;
+  font-family: courier;
+  color:green;  
+}
+
+p.noauthrest
+{
+  width: 25em;
+  border: 1px solid #000000;
+  word-wrap: break-word;
+  font-size: 10px;
+  font-family: courier;
+  color:red;
+}

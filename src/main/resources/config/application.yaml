@@ -1,0 +1,17 @@
+myml:
+  url: 'https://logint.maerskline.com'
+
+---
+
+spring:
+    profiles: preprod
+myml:
+  url: 'https://my-demo.maerskline.com'
+
+---
+
+spring:
+    profiles: production
+myml:
+  url: 'https://my.maerskline.com'
+

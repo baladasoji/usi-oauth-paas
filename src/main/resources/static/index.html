@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script type="text/javascript" src="frauth.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to the demo of OAuth tokens - Pls click first link to login and then the button to display tokens !</h1>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-6">
+        <a href=https://autht.maerskline.com/connect/authorize?client_id=akana&scope=openid&nonce=123455&response_type=token&state=34567898&redirect_uri=https%3A%2F%2Fiam-cdt.maerskline.com%2Fspa%2Findex.html> Click here to get tokens </a>
+      </div>
+      <div class="col-xl-6">
+        <input type="button" value="Click to display tokens" onclick="populateTokens()">
+      </div>
+
+      <div class="col-xl-6"> Id token goes here </div>
+      <div class="col-xl-6" id="idtoken"> </div>
+
+      <div class="col-xl-6"> Access token goes here </div>
+      <div class="col-xl-6"id="accesstoken"> </div>
+      <div class="col-xl-6"> State goes here </div>
+      <div class="col-xl-6" id="state"> </div>
+      <div class="col-xl-6"> Tokentype Goes here </div>
+      <div class="col-xl-6" id="tokentype"></div>
+
+      <div class="col-xl-6"> Decoded Token Goes here </div>
+      <div class="col-xl-6" id="usitoken"></div>
+      <div class="col-xl-6"> Call Forgerock Authentication </div>
+      <div class="col-xl-6">
+        <input type="button" value="Click to authenticate with FR" onclick="callFrAuthenticate()">
+      </div>
+      <div class="col-xl-6"> Fr Auth token </div>
+      <div class="col-xl-6" id="frauth"></div>
+      <div class="col-xl-6"> Call Forgerock Access token </div>
+      <div class="col-xl-6">
+        <input type="button" value="Click to get access token from forgerock" onclick="oauth2SignIn()">
+      </div>
+      <div class="col-xl-6"> Fr Auth token </div>
+      <div class="col-xl-6" id="fraccess"></div>
+      <div class="col-xl-6"> Call API on Akana </div>
+      <div class="col-xl-6">
+        <input type="button" value="Click to call API" onclick="callLocationAPI()">
+      </div>
+      <div class="col-xl-6"> Locations Response </div>
+      <div class="col-xl-6" id="cities"></div>
+  </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
